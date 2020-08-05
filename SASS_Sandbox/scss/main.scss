@@ -1,0 +1,90 @@
+@import 'variables';
+@import 'functions';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: $light;
+    color: $dark;
+    font-family: $font-stack;
+    line-height: 1.5;
+}
+
+header{
+    background: $dark;
+    color: set-text-color($dark);
+    padding: 1rem;
+
+    h1{
+        text-align: center;
+    }
+}
+
+.section{
+    padding: 3rem;
+
+    h3{
+        font-size: 2rem;
+    }
+    // & represents name of parent. In this case: section
+    &-a {
+        background: $primary;
+        color: set-text-color($primary);
+    }
+    &-b {
+        background: $secondary;
+        color: set-text-color($secondary);
+    }
+}
+
+// SHARED CLASSES
+%btn-shared{
+    display: inline-block;
+    padding: 0.7rem 2rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.btn {
+    &-light {
+        // EXTENDING SHARED CLASSES
+        @extend %btn-shared;
+        background-color: $light;
+        color: set-text-color($light);
+
+        &:hover {
+            // INCLUDING MIXINS
+            @include transform(rotate(-5deg));
+            // Darken COLORS
+            background-color: darken($light, 20%);
+        }
+    }
+    &-dark {
+        // EXTENDING SHARED CLASSES
+        @extend %btn-shared;
+        background-color: $dark;
+        color:set-text-color($dark);
+
+        &:hover {
+            // INCLUDING MIXINS
+            @include transform(rotate(-5deg));
+            // LIGHTENING COLORS
+            background-color: lighten($dark, 20%);
+        }
+    }
+}
+
+// a {
+//     color: $dark;
+//------------------------
+// FOR PSEUDO 
+//------------------------
+//     &:hover {
+//         color: coral;
+//     }
+// }

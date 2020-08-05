@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333333;
+        }
+
+        .box {
+            margin: auto;
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            /* Lets us at top, bottom left right params */
+            position: relative;
+            /* Name */
+            animation-name: animate1;
+            animation-duration: 2s;
+            /* # Animation loops */
+            animation-iteration-count: 1;
+            /* Animate then stay where it is at */
+            animation-fill-mode: forwards;
+            /* Wait 2s then go */
+            animation-delay: 0.5s;
+            /* Opposite direction(or just use alternate for regular) */
+            animation-direction: alternate-reverse
+                /* ease-in, ease-out, ease-in-out */
+                animation-timing-function: ease-in-out;
+
+            /* short way */
+            /* animation:animate1 5s forwards 1s ease-in-out; */
+        }
+
+        @keyframes animate1 {
+            from {
+                top: 0;
+                width: 200px;
+                background-color: white;
+            }
+
+            to {
+                top: 300px;
+                width: 600px;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

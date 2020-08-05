@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum & inputs</title>
+</head>
+<body>
+    <form action="process.php">
+        <!-- Name (note placeholders)-->
+        <div>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" placeholder="John Doe">
+        </div>
+        <!-- Email (note placeholders) -->
+        <div>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="jdoe@gmail.com">
+        </div>
+        <!-- Message (note placeholders) -->
+        <div>
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" cols="50" rows="5" placeholder="Enter Message here"></textarea>
+        </div>
+        <!-- Drop Down Menu (Select) for preselected use "selected" -->
+        <div>
+            <label for="sex">Sex</label>
+            <select name="sex" id="sex">
+                <option value="Male" >Male</option>
+                <option value="Female" selected>Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <!-- Age / Number -->
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age">
+        </div>
+        <!-- Date / Birthday -->
+        <div>
+            <label for="birthday">Birthday</label>
+            <input type="date" name="birthday" id="birthday">
+        </div>
+        <!-- Radio (attribute "checked" for preselected) -->
+        <!-- With radio we can only choose 1 option -->
+        <div>
+            <label for="membership">Membership</label>
+            <input type="radio" name="membership" id="membership" value="Simple">Simple
+            <input type="radio" name="membership" id="membership" value="Standard" checked>Standard
+            <input type="radio" name="membership" id="membership" value="Super">Super
+        </div>
+        <!-- Check Box -->
+        <!-- TIP: To edit stuff of same name use CTRL + D. Then type -->
+        <div>
+            <label for="membership">I Like..</label>
+            <input type="checkbox" name="likes" id="likes" value="Bike"checked>Bike
+            <input type="checkbox" name="likes" id="likes" value="Car" >Car
+            <input type="checkbox" name="likes" id="likes" value="Truck">Truck
+            <br>
+            <!-- <input type="submit" value="Submit"> -->
+            <button>Submit</button>
+            <!-- Reset -->
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

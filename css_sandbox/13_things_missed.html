@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        /* Order of precidence: targeting a class overrides the object itself */
+
+        .hello{
+            color: red;
+
+            /* You can have negative margin */
+            margin-top: -30px;
+            margin-left: -30px;
+
+            /* CANNOT have negative padding */
+            padding-top: -30px;
+        }
+
+
+        h1{
+            /* As if the object wasnt there */
+            /* display: none; */
+
+            /* Still takes up space but is a blank space */
+            /* visibility: hidden; */
+            color: blue !important;
+            /* !important says you want this to take presidence */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1 class="hello">Hello World</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga at neque omnis deserunt doloribus minus?</p>
+</body>
+</html>

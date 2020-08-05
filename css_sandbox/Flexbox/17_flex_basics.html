@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basics</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .item{
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            /* flex: grow shrink basis */
+            /* flex: 1 0 200px; */
+            flex: 1;
+        }
+
+        .item-1{
+            /* Makes it so that boxes never shrink on window getting smaller */
+            flex-shrink: 0;
+        }
+        .item-2{
+            /* Makes boxes take up remaining space of the line */
+            /* If we put on all, all boxes evenly take up same amount of space */
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+        .item-3{
+            /* Makes this item twice the size of item-2 */
+            flex-grow: 2;
+            flex-basis: 0;
+        }
+
+        .flex-container{
+            display: flex;
+            /* Default row */
+            /* flex-direction: column; */
+
+            /* Responsiveness(boxes move to next row) */
+            /* flex-wrap: wrap; */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="item item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item item-3">
+            <h3>Item 3</h3>
+        </div>
+        <!-- <h1>This is direct child</h1> -->
+    </div>
+</body>
+</html>

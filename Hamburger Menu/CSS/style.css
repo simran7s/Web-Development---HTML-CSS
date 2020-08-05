@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Piedra&family=Roboto:wght@400;500&display=swap');
+
+:root{
+    --primary-color: rgba(13, 110, 139, 0.6);
+    --secondary-color: rgba(229, 148, 0, 0.9);
+    --overlay-color: rgba(24,39,51,0.85);
+    --menu-speed: 0.75s;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'roboto', sans-serif;
+    line-height: 1.4;
+}
+
+.container{
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3rem;
+}
+
+#showcase {
+    background: var(--primary-color);
+    color: white;
+    height: 100vh;
+    /* Needed for before overlay */
+    position: relative;
+}
+
+#showcase:before{
+    /* we always need content when using before or after */
+    content: '';
+    background: url('../img/showcase.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#showcase .showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Needed so content pushed down */
+    height: 100%;
+}
+
+#showcase h1{
+    font-size: 4rem;
+}
+
+#showcase p{
+    font-size: 1.3rem;
+}
+
+.btn{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    background: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+
+    transition: background-color 1s ease;
+}
+
+.btn:hover{
+    background-color: var(--secondary-color);
+}

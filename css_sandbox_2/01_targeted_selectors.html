@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeted Selectors</title>
+    <style>
+        /* Direct Child(first child) */
+        div>p {
+            background: #dddddd;
+        }
+
+        /* Directly after (all p with a div before it) - siblings only*/
+        div+p {
+            background: #333333;
+            color: white;
+        }
+
+        /* By Attribute */
+        a[target] {
+            background: red;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 0px 20px;
+            flex-basis: 1;
+            flex-grow: 1;
+        }
+
+
+        /* By Specific Attribute value */
+        a[target="_blank"] {
+            background: black;
+            color: white;
+            justify-content: center;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        input[type="submit"] {
+            border-style: none;
+            background: #333;
+            color: white;
+            padding: 10px 5px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <ul>
+            <li>Item 1</li>
+            <li>
+                <p>Item 2</p>
+            </li>
+            <li>Item 3</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet. </p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <a href="">Page 1</a>
+    <a href="" target="_self">Page 2</a>
+    <!-- New tab on link open -->
+    <a href="http://google.com" target="_blank">Google</a>
+
+    <br><br>
+
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+
+</html>

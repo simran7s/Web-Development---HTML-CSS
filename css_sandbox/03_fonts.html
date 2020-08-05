@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Non-webstate fonts(inserted link from google) -->
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap" rel="stylesheet">
+    <title>Fonts</title>
+    <!-- CSS Styling -->
+    <style>
+        body{
+            /* This is a font stack, If first font isnt avalable, then it moves down the list to try next font */
+            /* MuseoModerno is linked from Google */
+            /* font-family: 'MuseoModerno', cursive; */
+            font-family:'MuseoModerno', cursive;
+            /* Default is 16px */
+            font-size: 18px;
+            /* Line height(in em units)*/
+            line-height: 1.6em;
+
+            /* UNITS:
+            em: Based on parent element font size
+            rem: based on root element font size
+            */
+        }
+
+        /* Targetting spans (look under welcome id, in all p's, for spans) */
+        #welcome p span{
+            /* Bolding */
+            font-weight:bold;
+        }
+
+        #about p span{
+            /* Italic */
+            font-style: italic;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome">
+        <h2 class="primary-heading">Welcome</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur <span> elit. Rerum consectetur ea mollitia tempore fugiat</span> fuga cum eaque iusto fugit doloremque?</p>
+    </div>
+    <div id="about">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor <span> amet consectetur, adipisicing elit. Odit, ad? Doloremque provident excepturi doloribus </span> inventore voluptatem perferendis ipsa aspernatur incidunt.</p>
+    </div>
+</body>
+</html>

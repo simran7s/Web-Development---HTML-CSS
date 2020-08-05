@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div, Span, id and class</title>
+</head>
+<body>
+    <div id="main-header" class="card">
+        <h1>My website</h1>
+        <p>A site about me</p>
+    </div>
+    <ul id="main-nav"> 
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <!-- TIP: to make an element have a certain id use element#idname then enter -->
+    <!-- TIP: or for divs just use #idName then enter -->
+    <!-- TIP: same for class but with . instead -->
+    <div id="about" class="card">
+        <h3>About</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, id quisquam debitis possimus, adipisci aspernatur iusto quos voluptate placeat amet qui ratione libero non minus, soluta velit ducimus asperiores. Quibusdam.</p>
+    </div>
+
+    <div id="contact" class="card">
+        <h3>Contact Me</h3>
+        <ul>
+            <li>Address: 28 Alfredo Ave</li>
+            <li>Phone: (647)-904-9700</li>
+            <li>Email: 7simransandhu@gmail.com</li>
+        </ul>
+    </div>
+    
+  
+
+    <!--Using ID or CLASS -->
+        <!-- ID: unique elements. Don't repeat -->
+        <!-- Class: group things together into same class. Meant for repeating -->
+
+        <!-- CSS IGNORE -->
+        <style>
+            .card{
+                border: 1px solid green;
+                background: lightcoral;
+                padding: 20px;
+                margin-bottom: 10px;
+            }
+
+            .enhance{
+                color: yellow;
+                background-color: black;
+            }
+        </style>
+
+        <!-- DIV vs Span -->
+        <!-- Div: Seperates in block level -->
+        <h3>Div</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque laboriosam qui quo quae soluta excepturi, <div class="enhance"> rerum ipsam provident </div>, accusantium at sed possimus cumque voluptatum aut dolore eaque ducimus ea! Architecto.</p>
+        
+        <!-- Span: inline/inplace-->
+        <h3>Span</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque laboriosam qui quo quae soluta excepturi, <span class="enhance"> rerum ipsam provident </span>, accusantium at sed possimus cumque voluptatum aut dolore eaque ducimus ea! Architecto.</p>
+
+        <div id="footer">
+            Copyright &copy; 2020
+        </div>
+</body>
+</html>

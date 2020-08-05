@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vh & vw units</title>
+    <style>
+
+        /* VH is great for having landing pages */
+
+
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding:0;
+        }
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header{
+            background: url(https://source.unsplash.com/daily) no-repeat center center/cover;
+            color: #ffffff;
+            height: 100vh;
+            /* width: 50vw; */
+            text-align: center;
+            padding: 2rem;
+            padding-top: 5rem;
+        }
+
+        header h1{
+            font-size: 3rem;
+
+        }
+
+        header p{
+            margin: 1rem 0;
+        }
+
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            background: black;
+            color: #fff;
+            padding: 0.75rem 2rem;
+        }
+
+        section{
+            padding: 2rem;
+        }
+        /* When height less than 450px, this will kick in */
+        @media(max-height:450px){
+            padding-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BLACK LIVES MATTER</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis adipisci at non accusantium eveniet dolore!</p>
+        <a href="#" class="btn">Find out more</a>
+    </header>
+
+    <section>
+        <h3>About Our Company</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, dolorem cum deserunt hic iste natus dolore, laudantium rem iure amet autem nam libero odio quod quidem, a eos perspiciatis! Sit dolor repellendus ipsa voluptate ducimus. Natus itaque laudantium cupiditate sit dolorum, eos sed in commodi, ratione consequuntur optio, repellendus vero.</p>
+    </section>
+</body>
+</html>
